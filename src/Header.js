@@ -3,8 +3,14 @@ import "./Header.css"
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from "@material-ui/icons/Home";
 import FlagIcon from '@material-ui/icons/Flag';
-import SubscriptionOutlined from '@material-ui/icons/SubscriptionsOutlined';
-import SupervisedUserCircle from '@material-ui/icons/SupervisedUserCircle';
+import SubscriptionOutlinedIcon from '@material-ui/icons/SubscriptionsOutlined';
+import StorefrontOutlinedIcon from '@material-ui/icons/SupervisedUserCircle';
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+import { Avatar, IconButton } from '@material-ui/core';
+import ForumIcon from "@material-ui/icons/Forum";
+import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
 
 function Header() {
 	return (
@@ -23,8 +29,28 @@ function Header() {
 		 <div className="header__option">
 			<HomeIcon fontsize="large" />
 			</div>
+			 <div className="header__option">
+			<FlagIcon fontsize="large" />
+			</div>
+			 <div className="header__option">
+			<SubscriptionOutlinedIcon fontsize="large" />
+			</div>
+			 <div className="header__option">
+			<StorefrontOutlinedIcon fontsize="large" />
+			</div>
+			 <div className="header__option">
+			<SupervisedUserCircleIcon fontsize="large" />
+			</div>
 		</div>
-		<div className="header__right"></div>
+		<div className="header__right">
+		<div className="header__info">
+			<Avatar />
+			<h4>Ionis</h4>
+		</div>
+		<IconButton>
+			<AddIcon />
+		 </IconButton>
+		</div>
 	</div>
 	)
 }
