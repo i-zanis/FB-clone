@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 
 
 function App() {
-  return (
+  return (   
   //BEM NAMING CONVENTION
     <div className="app">
    <h1> Facebook clone</h1>
