@@ -1,7 +1,7 @@
 import React from 'react';
 import "./StoryReel.css";
 
-function StoryReaal() {
+function StoryReel() {
 	return (
 		<div className="storyReel">
 		</div>
