@@ -4,8 +4,13 @@ import "./StoryReel.css";
 function StoryReel() {
 	return (
 		<div className="storyReel">
+		{/* Story */}
+		{/* Story */}
+		{/* Story */}
+		{/* Story */}
+		{/* Story */}
 		</div>
 	)
 }
 
-export default StoryReel
+export default StoryReel;

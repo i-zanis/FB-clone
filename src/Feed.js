@@ -6,4 +6,5 @@ function Feed() {
 	{/* Story */}
 	{/* MessageSender */}
 	</ div>;
+
 	}
