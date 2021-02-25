@@ -2,7 +2,7 @@ import React from 'react'
 
 function Feed() {
 	return	<div className = "feed";
-	<StoryReeal />
+	<StoryReel />
 	{/* Story */}
 	{/* MessageSender */}
 	</ div>;
