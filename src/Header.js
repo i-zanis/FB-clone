@@ -1,12 +1,12 @@
 import React from "react"
 import "./Header.css"
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";
-import FlagIcon from '@material-ui/icons/Flag';
-import SubscriptionOutlinedIcon from '@material-ui/icons/SubscriptionsOutlined';
-import StorefrontOutlinedIcon from '@material-ui/icons/SupervisedUserCircle';
-import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
-import { Avatar, IconButton } from '@material-ui/core';
+import FlagIcon from "@material-ui/icons/Flag";
+import SubscriptionOutlinedIcon from "@material-ui/icons/SubscriptionsOutlined";
+import StorefrontOutlinedIcon from "@material-ui/icons/SupervisedUserCircle";
+import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
+import { Avatar, IconButton } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
@@ -23,7 +23,7 @@ function Header() {
 		/>
 		<div className="header__input">
 		<SearchIcon/>
-		<input placeholder= 'Search Facebook'
+		<input placeholder= "Search Facebook"
 		type="text" />
 		</div>
 		</div>

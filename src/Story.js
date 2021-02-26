@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./Stroy.css";
 
 function Story({ image, profileSrc, title }) {

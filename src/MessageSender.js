@@ -1,8 +1,15 @@
 import React from "react";
-import "./MessageSender.css";
-function MessageSender() {
+import "./SidebarRow.css";
+import { Avatar } from "@material-ui/core";
+
+function SidebarRow({ src, Icon, title }) {
     return (
-        <dive classNae="messageSender"></div>;
+        <div className="sidebarRow">
+            {src && <Avatar src={src} />}
+            {Icon && <Icon />}
+            <h4>{title}</h4>
+        </div>
+    )
 }
 
-export default MessageSender;
+export default App;

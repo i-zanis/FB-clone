@@ -1,13 +1,13 @@
-import { Widgets } from "@material-ui/icons";
 import React from "react";
-import './App.css';
+import "./App.css";
+import Feed from "./Feed";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Widgets from "./Widgets";
 
-
+  //BEM NAMING CONVENTION
 function App() {
   return (   
-  //BEM NAMING CONVENTION
     <div className="app">
    <h1> Facebook clone</h1>
     <Header />
@@ -15,7 +15,7 @@ function App() {
     <div className="app__body">
     <Sidebar/>
     <Feed />
-              {/*Widgets*/}
+    {/*Widgets*/}
     </div>
    </div>
   );
