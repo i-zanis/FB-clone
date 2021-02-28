@@ -1,6 +1,10 @@
 import React from "react";
 import "./SidebarRow.css";
 import { Avatar } from "@material-ui/core";
+import "./MessageSender.css";
+import VideocamIcon from "material-ui/icons/PhotoLibrary";
+import InsertEmoticonIcon from "@material-ui/icon/InsertEmoticon";
+
 
 function MessageSender() { src, Icon, title }) {
     const handleSubmit = (e) => {
@@ -10,17 +14,33 @@ function MessageSender() { src, Icon, title }) {
         <div className="messageSender">
             <div className="messageSender__top">
                 <Avatar />
-                <div className="messageSender__top">
-                    <input
-                        className="messageSender_input"
-                        placeholder={"What's on your mind"}
-                    />
-                    <input placeholder="image URL (Optional)" />
-                    <button onClick={handSubmit} type="submit">
+                <form>
+                    <input 
+                        className="messageSender__input"
+                        place={"What's on your mind"}
+                    /> 
+                    <input placeholder="image ULR (Optional)" />
+                    <button onClick={handleSubmit} type="submit">
                         Hidden submit
-                    </form>
+                        </button>
+                </form>
             </div>
-            <div className="messageSender_bottom"></div>
+
+            <div className="messageSender bottom">
+                <div className="messageSender__option">
+                    <VideocamIcon style {{ color: "red" }} />
+                    <h3>Live Video</h3>
+                </div>
+                <div className="messageSender__option">
+                    <PhotoLibraryIcon style={{ color: "green" }} />
+                    <h3>Photo/Video</h3>
+                </div>
+                <div className="messageSender_option">
+                    <InsertEmoticonIcon style={{ color: "orange" }}
+                    />
+                    <h3>Feeling/Activity</h3>
+                </div>  
+                </div>
         </div>
     );
 }
