@@ -22,7 +22,7 @@ function MessageSender() { src, Icon, title }) {
                     <input placeholder="image ULR (Optional)" />
                     <button onClick={handleSubmit} type="submit">
                         Hidden submit
-                        </button>
+                        </button>   
                 </form>
             </div>
 
