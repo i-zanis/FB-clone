@@ -1,9 +1,10 @@
 import React from "react";
+
 function Feed() {
     return (
         <div className="feed">
-            <StoryReel />
-            <MessageSender />
+            <StoryReel/>
+            <MessageSender/>
             {posts.map(post => (
                 <Post
                     key={post.data.id}
@@ -17,4 +18,5 @@ function Feed() {
         </div>
     );
 }
+
 export default Feed;
