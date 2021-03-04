@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Feed from "./Feed";
 import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Sidebar from "./components/sidebar/Sidebar";
 
 //BEM NAMING CONVENTION
 function App() {
