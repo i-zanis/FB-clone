@@ -3,7 +3,7 @@ import "./StoryReel.css";
 
 function StoryReel() {
     return (
-        <div className="storyReel">
+       <div className="storyReel">
             {/* Story */}
             {/* Story */}
             {/* Story */}

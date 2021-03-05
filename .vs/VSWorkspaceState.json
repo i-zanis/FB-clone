@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\sidebar"
   ],
-  "SelectedNode": "\\src\\Sidebar.js",
+  "SelectedNode": "\\src\\components\\sidebar\\sidebarrow",
   "PreviewInSolutionExplorer": false
 }
