@@ -1,6 +1,6 @@
 import './Feed.css';
 import MessageSender from './MessageSender';
-import Post from './Post';
+import Post from './components/post/Post';
 import StoryReel from './StoryReel';
 
 
@@ -8,8 +8,8 @@ function Feed() {
     const [posts, setPosts] = useState([]);
     return (
         <div className="feed">
-            <StoryReel />
-            <MessageSender />
+            <StoryReel/>
+            <MessageSender/>
             {posts.map(post => (
                 <Post
                     key={post.data.id}
