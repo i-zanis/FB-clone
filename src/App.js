@@ -3,6 +3,7 @@ import "./App.css";
 import Feed from "./Feed";
 import Header from "./Header";
 import Sidebar from "./components/sidebar/Sidebar";
+import Widgets from "./Widgets";
 
 //BEM NAMING CONVENTION
 function App() {
@@ -14,7 +15,7 @@ function App() {
             <div className="app__body">
                 <Sidebar/>
                 <Feed/>
-                {/*Widgets*/}
+                <Widgets />
             </div>
         </div>
     );
