@@ -1,8 +1,17 @@
-import { Button } from '@material-ui/core';
-import React from 'react';
-import './Login.css';
+import { Button } from "@material-ui/core";
+import React from "react";
+import "./Login.css";
+// local firebase
+import { auth, provider } from "./firebase";
 
 function Login() {
+    const signIN = () => {
+        // provider from firebase.js
+        auth.signInWithPopup(provider)
+            .then(result => {
+                console.log(result)
+            }).catch(error => alert(error.message));
+    }
     return (
         <div className="login">
             <div className="login__logo">
@@ -15,6 +24,7 @@ function Login() {
                     alt=""
                 />
             </div>
+            {/* eslint-disable-next-line no-undef */}
             <Button type="submit" onClick={signIn}>
                 Sign In
             </Button>

@@ -1,10 +1,11 @@
-import './Feed.css';
-import MessageSender from './MessageSender';
-import Post from './components/post/Post';
-import StoryReel from './StoryReel';
+import "./Feed.css";
+import MessageSender from "./MessageSender";
+import Post from "./components/post/Post";
+import StoryReel from "./StoryReel";
 
 
 function Feed() {
+    // eslint-disable-next-line no-undef
     const [posts, setPosts] = useState([]);
     return (
         <div className="feed">

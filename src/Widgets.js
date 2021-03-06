@@ -1,5 +1,5 @@
 import React from "react";
-import ".Widgets.css";
+import "./Widgets.css";
 
 // embeds a webpage into the webpage
 // https://developers.facebook.com/docs/plugins/page-plugin/
