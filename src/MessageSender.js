@@ -9,7 +9,8 @@ import {useStateValue} from "./StateProvider";
 import db from "./firebase";
 import firebase from "firebase";
 
-
+// Section for What's on your mind messages
+// Live Photo/Video/Feeling Activity
 function MessageSender() {
     const [{user}, dispatch] = useStateValue();
     const [input, setInput] = useState("");
