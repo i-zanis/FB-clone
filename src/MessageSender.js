@@ -1,71 +1,73 @@
-import React from "react";
-import "./Header.css";
-import SearchIcon from "@material-ui/icons/Search";
-import HomeIcon from "@material-ui/icons/Home";
-import FlagIcon from "@material-ui/icons/Flag";
-import SubscriptionsOutlinedIcon from "@material-ui/icons/SubscriptionsOutlined";
-import StorefrontOutlinedIcon from "@material-ui/icons/StorefrontOutlined";
-import SupervisedUserCirceIcon from "@material-ui/icons/SupervisedUserCircle";
-import {Avatar, IconButton} from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
-import ForumIcon from "@material-ui/icons/Forum";
-import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import {Avatar} from "@material-ui/core";
+import React, {useState} from "react";
+import "./MessageSender.css";
+import VideocamIcon from "@material-ui/icons/Videocam";
+import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import {useStateValue} from "./StateProvider";
+import db from "./firebase"
+import firebase from "firebase"
 
 
-function Header() {
+function MessageSender() {
     const [{user}, dispatch] = useStateValue();
+    const [input, setInput] = useState("");
+    const [inputURL, setInputURL] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        db.collection("posts").add({
+            message: input,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            profilePic: user.photoURL,
+            username: user.displayName,
+            image: inputURL
+        })
+
+        setInput("");
+        setInputURL("");
+    };
 
     return (
-        <div className="header">
-            <div className="header__left">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png"
-                    alt=""
-                />
-                <div className="header__input">
-                    <SearchIcon/>
-                    <input placeholder="Search Facebook" type="text"/>
-                </div>
+        <div className="messageSender">
+            <div className="messageSender__top">
+                <Avatar src={user.photoURL}/>
+                <form>
+                    <input
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        type="text"
+                        className="messageSender__input"
+                        placeholder={`What"s on your mind, ${user.displayName}?`}
+                    />
+                    <input
+                        value={inputURL}
+                        onChange={(e) => setInputURL(e.target.value)}
+                        type="text"
+                        placeholder="Image URL (Optional)"
+                    />
+                    <button onClick={handleSubmit} type="submit">
+                        Hidden Button
+                    </button>
+                </form>
             </div>
-            <div className="header__center">
-                <div className="header__option header__option--active">
-                    <HomeIcon fontSize="large"/>
+            <div className="messageSender__bottom">
+                <div className="messageSender__option">
+                    <VideocamIcon style={{color: "red"}}/>
+                    <h3>Live Video</h3>
                 </div>
-                <div className="header__option">
-                    <FlagIcon fontSize="large"/>
+                <div className="messageSender__option">
+                    <PhotoLibraryIcon style={{color: "green"}}/>
+                    <h3>Photo/Video</h3>
                 </div>
-                <div className="header__option">
-                    <SubscriptionsOutlinedIcon fontSize="large"/>
+                <div className="messageSender__option">
+                    <InsertEmoticonIcon style={{color: "orange"}}/>
+                    <h3>Feeling/Activity</h3>
                 </div>
-                <div className="header__option">
-                    <StorefrontOutlinedIcon fontSize="large"/>
-                </div>
-                <div className="header__option">
-                    <SupervisedUserCirceIcon fontSize="large"/>
-                </div>
-            </div>
-            <div className="header__right">
-                <div className="header__info">
-                    <Avatar src={user.photoURL}/>
-                    <h4>{user.displayName}</h4>
-                </div>
-                <IconButton>
-                    <AddIcon/>
-                </IconButton>
-                <IconButton>
-                    <ForumIcon/>
-                </IconButton>
-                <IconButton>
-                    <NotificationsActiveIcon/>
-                </IconButton>
-                <IconButton>
-                    <ExpandMoreIcon/>
-                </IconButton>
             </div>
         </div>
     );
 }
 
-export default Header;
+export default MessageSender;
