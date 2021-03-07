@@ -5,23 +5,24 @@ import Header from "./Header";
 import Login from "./Login";
 import Sidebar from "./components/sidebar/Sidebar.js";
 import Widgets from "./Widgets";
-import { useStateValue } from "./StateProvider";
+import {useStateValue} from "./StateProvider";
 
 //BEM NAMING CONVENTION
 function App() {
-    const user = "usertest"
-
+   const [{user}, dispatch] = useStateValue();
+    // Login Push User into Data Layer *React Context API
+    // Access User in every component
     return (
         <div className="app">
             {!user ? (
-                <Login />
+                <Login/>
             ) : (
                 <>
-                    <Header />
+                    <Header/>
                     <div className="app__body">
-                        <Sidebar />
-                        <Feed />
-                        <Widgets />
+                        <Sidebar/>
+                        <Feed/>
+                        <Widgets/>
                     </div>
                 </>
             )}
