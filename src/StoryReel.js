@@ -1,7 +1,7 @@
 import React from "react";
 import Story from "./Story";
 import "./StoryReel.css";
-
+// Added some placeholder values for testing
 const img =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Greenland_scoresby-sydkapp2_hg.jpg/1024px-Greenland_scoresby-sydkapp2_hg.jpg";
 
@@ -16,7 +16,7 @@ function StoryReel() {
             <Story
                 image={img}
                 profileSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Digimon_Mini.jpg/1024px-Digimon_Mini.jpg"
-                title="Digitalmon"
+                title="RusExplorer"
             />
             <Story
                 image={img}
@@ -31,7 +31,7 @@ function StoryReel() {
             <Story
                 image={img}
                 profileSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/AnnBancroft2006-02-06.JPG/440px-AnnBancroft2006-02-06.JPG"
-                title="Ann Bancroft"
+                title="Bancroft"
             />
         </div>
     );
