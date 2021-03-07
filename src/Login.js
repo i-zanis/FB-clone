@@ -9,7 +9,7 @@ import {useStateValue} from "./StateProvider";
 function Login() {
     // Pull Info from Data Layer
     const [ {}, dispatch] = useStateValue();
-    const signIN = () => {
+    const signIn = () => {
         // provider from firebase.js
         auth
             .signInWithPopup(provider)
