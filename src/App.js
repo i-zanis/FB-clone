@@ -9,7 +9,7 @@ import {useStateValue} from "./StateProvider";
 
 //BEM NAMING CONVENTION
 function App() {
-   const [{user}, dispatch] = useStateValue();
+    const [{user}, dispatch] = useStateValue();
     // Login Push User into Data Layer *React Context API
     // Access User in every component
     return (

@@ -3,12 +3,12 @@ import React from "react";
 import "./Login.css";
 // local firebase
 import {auth, provider} from "./firebase";
-import {actionTypes } from "./reducer";
+import {actionTypes} from "./reducer";
 import {useStateValue} from "./StateProvider";
 
 function Login() {
     // Pull Info from Data Layer
-    const [ {}, dispatch] = useStateValue();
+    const [{}, dispatch] = useStateValue();
     const signIn = () => {
         // provider from firebase.js
         auth

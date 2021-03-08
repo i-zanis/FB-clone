@@ -6,16 +6,16 @@ import FlagIcon from "@material-ui/icons/Flag";
 import SubscriptionsOutlinedIcon from "@material-ui/icons/SubscriptionsOutlined";
 import StorefrontOutlinedIcon from "@material-ui/icons/StorefrontOutlined";
 import SupervisedUserCirceIcon from "@material-ui/icons/SupervisedUserCircle";
-import { Avatar, IconButton } from "@material-ui/core";
+import {Avatar, IconButton} from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { useStateValue } from "./StateProvider";
+import {useStateValue} from "./StateProvider";
 
 
 function Header() {
-    const [{user} , dispatch] = useStateValue();
+    const [{user}, dispatch] = useStateValue();
 
     return (
         <div className="header">
@@ -25,25 +25,25 @@ function Header() {
                     alt=""
                 />
                 <div className="header__input">
-                    <SearchIcon />
-                    <input placeholder="Search Facebook" type="text" />
+                    <SearchIcon/>
+                    <input placeholder="Search Facebook" type="text"/>
                 </div>
             </div>
             <div className="header__center">
                 <div className="header__option header__option--active">
-                    <HomeIcon fontSize="large" />
+                    <HomeIcon fontSize="large"/>
                 </div>
                 <div className="header__option">
-                    <FlagIcon fontSize="large" />
+                    <FlagIcon fontSize="large"/>
                 </div>
                 <div className="header__option">
-                    <SubscriptionsOutlinedIcon fontSize="large" />
+                    <SubscriptionsOutlinedIcon fontSize="large"/>
                 </div>
                 <div className="header__option">
-                    <StorefrontOutlinedIcon fontSize="large" />
+                    <StorefrontOutlinedIcon fontSize="large"/>
                 </div>
                 <div className="header__option">
-                    <SupervisedUserCirceIcon fontSize="large" />
+                    <SupervisedUserCirceIcon fontSize="large"/>
                 </div>
             </div>
             <div className="header__right">
@@ -52,16 +52,16 @@ function Header() {
                     <h4>{user.displayName}</h4>
                 </div>
                 <IconButton>
-                    <AddIcon />
+                    <AddIcon/>
                 </IconButton>
                 <IconButton>
-                    <ForumIcon />
+                    <ForumIcon/>
                 </IconButton>
                 <IconButton>
-                    <NotificationsActiveIcon />
+                    <NotificationsActiveIcon/>
                 </IconButton>
                 <IconButton>
-                    <ExpandMoreIcon />
+                    <ExpandMoreIcon/>
                 </IconButton>
             </div>
         </div>
