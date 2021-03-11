@@ -4,7 +4,7 @@
     justify-content: space-between;
 
     position: sticky;
-    background-color: #fff;
+    background-color: white;
     z-index: 100;
 
     top: 0;
@@ -23,7 +23,7 @@
     background-color: #eff2f5;
     padding: 10px;
     margin-left: 10px;
-    border-radius: 999px;
+    border-radius: 999px; /* perfect oval */
 }
 
 .header__left > img {
@@ -32,8 +32,8 @@
 
 .header__input > input {
     border: none;
-    background-color: transparent;
-    outline-width: 0;
+    background-color: transparent; /* blend with background */
+    outline-width: 0; /* remove blue highlight outline */
 }
 
 .header__center {
@@ -72,7 +72,7 @@
     padding: 0 30px;
     border-bottom: 0;
 }
-
+/* Name/Prof Pic top-right */
 .header__info {
     display: flex;
     align-items: center;

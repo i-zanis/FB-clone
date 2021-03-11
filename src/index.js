@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-//import * as serviceWorker from "./serviceWorker";
 import {StateProvider} from "./StateProvider";
 import reducer, {initialState} from "./reducer";
 
@@ -15,5 +14,3 @@ ReactDOM.render(
     document.getElementById("root")
 );
 
-// For working offline faster change to unregister()
-//serviceWorker.unregister();

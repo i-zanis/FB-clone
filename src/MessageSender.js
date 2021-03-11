@@ -41,7 +41,7 @@ function MessageSender() {
                         onChange={(e) => setInput(e.target.value)}
                         type="text"
                         className="messageSender__input"
-                        placeholder={`What"s on your mind, ${user.displayName}?`}
+                        placeholder={`What's on your mind, ${user.displayName}?`}
                     />
                     <input
                         value={inputURL}

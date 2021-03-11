@@ -13,7 +13,7 @@ import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import {useStateValue} from "./StateProvider";
 
-
+// If something not functioning check icon imports
 function Header() {
     const [{user}, dispatch] = useStateValue();
 
